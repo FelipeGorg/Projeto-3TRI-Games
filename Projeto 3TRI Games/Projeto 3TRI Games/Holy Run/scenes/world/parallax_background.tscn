@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dyyxqilnmreqi"]
+
+[ext_resource type="Texture2D" uid="uid://cvdudr2bsjeu7" path="res://assets/sprites/backgrounds/clouds.png" id="2_clouds"]
+[ext_resource type="Texture2D" uid="uid://cjoxe26dbsswu" path="res://assets/sprites/backgrounds/newBackground.png" id="3_503aq"]
+[ext_resource type="Texture2D" uid="uid://6nsbnbnssxd3" path="res://assets/sprites/backgrounds/ambientacao (3).png" id="3_cbhq0"]
+[ext_resource type="Texture2D" uid="uid://bojvyh7iaadmj" path="res://assets/sprites/backgrounds/ambientacao (1).png" id="4_cbhq0"]
+
+[node name="ParallaxBackground" type="Node2D" unique_id=785062160]
+
+[node name="Sky" type="CanvasLayer" parent="." unique_id=1449822281]
+layer = -10
+
+[node name="TextureRect" type="TextureRect" parent="Sky" unique_id=242539044]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_503aq")
+expand_mode = 1
+
+[node name="Clouds" type="Parallax2D" parent="." unique_id=1041956582]
+scroll_scale = Vector2(0.05, 1)
+repeat_size = Vector2(640, 0)
+autoscroll = Vector2(-6, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds" unique_id=471315131]
+texture = ExtResource("2_clouds")
+centered = false
+
+[node name="Mountains" type="Parallax2D" parent="." unique_id=479613155]
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Mountains" unique_id=646017071]
+centered = false
+
+[node name="Hills" type="Parallax2D" parent="." unique_id=401313314]
+scroll_scale = Vector2(0.3, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Hills" unique_id=1597453058]
+light_mask = 917
+visibility_layer = 9
+texture_filter = 3
+position = Vector2(40.999985, 83.00001)
+scale = Vector2(0.40829346, 0.31499204)
+texture = ExtResource("3_cbhq0")
+centered = false
+
+[node name="Trees" type="Parallax2D" parent="." unique_id=651004311]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(640, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Trees" unique_id=1076608676]
+modulate = Color(0.9599507, 0.9599507, 0.9599507, 0.76500005)
+position = Vector2(-228, 226)
+scale = Vector2(0.3301435, 0.14433809)
+texture = ExtResource("4_cbhq0")
+centered = false

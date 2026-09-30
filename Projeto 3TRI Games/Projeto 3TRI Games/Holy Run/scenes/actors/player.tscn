@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dqtwe38i8y6lj"]
+
+[ext_resource type="Script" uid="uid://dh5odxhj624y4" path="res://scripts/actors/player.gd" id="1_script"]
+[ext_resource type="SpriteFrames" uid="uid://e508xsrflfh7" path="res://resources/sprite_frames/player_frames.tres" id="2_frames"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(22, 44)
+
+[node name="Player" type="CharacterBody2D" unique_id=550254551]
+collision_layer = 2
+script = ExtResource("1_script")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=389125048]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_body")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2095564609]
+position = Vector2(0, 3)
+scale = Vector2(0.125, 0.147)
+sprite_frames = ExtResource("2_frames")
+animation = &"kneel"
+autoplay = "idle"
+speed_scale = 0.1
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1481659287]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0

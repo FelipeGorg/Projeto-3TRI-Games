@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://d4dwk3fbjgqr5"]
+
+[ext_resource type="Texture2D" uid="uid://bl2xd8pgmnf6t" path="res://assets/sprites/enemies/enemy_walker_placeholder.png" id="1_tex"]
+[ext_resource type="Texture2D" uid="uid://beur2yv6isvwx" path="res://assets/sprites/enemies/enemy (2).png" id="2_b0cy2"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tex")
+}],
+"loop": 0,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b0cy2")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 6.0
+}]

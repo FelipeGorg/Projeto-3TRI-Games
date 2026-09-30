@@ -1,0 +1,59 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://e508xsrflfh7"]
+
+[ext_resource type="Texture2D" uid="uid://dfe8dtx0gy7io" path="res://assets/sprites/player/falling (2).png" id="1_3pxra"]
+[ext_resource type="Texture2D" uid="uid://cmujxnpy4v6o3" path="res://assets/sprites/player/idle_2-removebg-preview.png" id="2_3pxra"]
+[ext_resource type="Texture2D" uid="uid://d2j5c56v0bq3y" path="res://assets/sprites/player/idle_1-removebg-preview.png" id="3_u2m7b"]
+[ext_resource type="Texture2D" uid="uid://bfhgi8i5416fb" path="res://assets/sprites/player/jump_1.png" id="4_gaal0"]
+[ext_resource type="Texture2D" uid="uid://d0sm8v80bpamk" path="res://assets/sprites/player/Final-removebg-preview.png" id="5_u2m7b"]
+[ext_resource type="Texture2D" uid="uid://dm50lorc500d5" path="res://assets/sprites/player/run_2.png" id="5_xpnsn"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": 0,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3pxra")
+}],
+"loop": 0,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_3pxra")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_u2m7b")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_gaal0")
+}],
+"loop": 0,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_u2m7b")
+}],
+"loop": 1,
+"name": &"kneel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xpnsn")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 10.0
+}]

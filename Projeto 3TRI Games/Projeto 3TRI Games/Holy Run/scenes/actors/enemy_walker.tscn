@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://4mh8gek6j0gw"]
+
+[ext_resource type="Script" uid="uid://bkogfmouplwii" path="res://scripts/actors/enemy.gd" id="1_script"]
+[ext_resource type="SpriteFrames" uid="uid://d4dwk3fbjgqr5" path="res://resources/sprite_frames/enemy_walker_frames.tres" id="2_frames"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(28, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
+size = Vector2(28, 26)
+
+[node name="EnemyWalker" type="CharacterBody2D" unique_id=263224958]
+collision_layer = 4
+script = ExtResource("1_script")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1254067779]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_body")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=165253528]
+position = Vector2(-1.5000012, 0.24999952)
+scale = Vector2(0.16015625, 0.1453125)
+sprite_frames = ExtResource("2_frames")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=1502341633]
+position = Vector2(-16, 3)
+target_position = Vector2(0, 20)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=286548423]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1544338307]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_hitbox")

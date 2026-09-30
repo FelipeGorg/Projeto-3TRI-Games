@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d18hcjtbp3dx5"]
+
+[ext_resource type="Texture2D" uid="uid://cjoxe26dbsswu" path="res://assets/sprites/backgrounds/newBackground.png" id="1_l3thc"]
+
+[node name="Node2D" type="Node2D" unique_id=1485787659]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1977928450]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=123337999]
+offset_right = 638.0
+offset_bottom = 362.0
+texture = ExtResource("1_l3thc")
+expand_mode = 2
+stretch_mode = 4
